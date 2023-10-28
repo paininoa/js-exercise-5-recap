@@ -46,6 +46,8 @@ reverseWord(userWord);
 
 //2. Crea una funzione che concatena una lista di stringhe. Chiedi all'utente quante stringhe vuole concatenare e poi mostragli il risultato.
 /*
+
+// NOT FINISHED
 const userNumber = prompt("Write a number");
 let stringsArray = ["alessio", "mela", "ciao"];
 let concatStrings = stringsArray.join();
@@ -58,12 +60,34 @@ function stringsConcat() {
 
 //3. Crea una funzione che calcola il doppio di un numero. Quindi chiedi all'utente 10 numeri. Per ogni numero, mostra all'utente il doppio, usando la funzione.
 
+/*
 for (let i = 0; i < 10; i++) {
   let userNumber = prompt("Write a number");
-
   function double(number) {
     let timesTwo = number * 2;
     alert(timesTwo);
   }
   double(userNumber);
 }
+*/
+
+// 4. Crea una funzione che transforma una stringa in maiuscolo o minuscolo in base ad un parametro. Quindi, crea un array che contiene tutte le lettere dell'alfabeto, ciascuna randomicamente maiuscola o minuscola.
+// Consiglio: potete creare la stringa 'abcdefghijklmnopqrstuvz' e con un ciclo for controllare ogni carattere della stringa, ovvero ogni lettera dell'alfabeto.
+
+// 5. Crea una funzione che esegue il lancio di una moneta (ritorna testa o croce, casualmente). Quindi, chiedi all'utente quanti lanci vuole effettuare e se punta su testa o croce.
+// Se la maggioranza dei lanci sono uguali a ciò che ha puntato l'utente, mostragli che ha vinto. Altrimenti, mostragli che ha perso.
+
+let number = Math.random();
+console.log(number);
+let userThrows = Number(prompt("How many throws do you want?"));
+
+function coinFlip(throws) {
+  for (let i = 0; i < userThrows; i++) {}
+}
+if (number < 0.5) {
+  alert("Tail");
+} else {
+  alert("Head");
+}
+
+coinFlip(userThrows);
