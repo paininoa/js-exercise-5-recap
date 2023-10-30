@@ -145,6 +145,7 @@ animalCheck(userAnimal);
 
 // 10. Crea una funzione che ordina una lista di numeri dal più piccolo al più grande. Chiedi all'utente quanti numeri vuole inserire. Quindi, chiedi all'utente i numeri. Mostra all'utente la lista di numeri ordinata dal più piccolo al più grande.
 
+/*
 let numberList = [];
 let lenghtNumber = prompt("How many numbers do you want in the list?");
 
@@ -158,3 +159,28 @@ function orderedList(numbers) {
 }
 
 orderedList(lenghtNumber);
+*/
+
+// 11. Crea una funzione che ordina una lista di numeri. In base a uno dei parametri, viene ordinata dal più piccolo al più grande o viceversa. Chiedi all'utente quanti numeri vuole inserire. Quindi, chiedi all'utente i numeri. Infine, chiedi all'utente se li vuole visualizzare in ordine crescente o decrescente. Mostra all'utente la lista di numeri ordinata nel modo in cui ha chiesto.
+
+/*
+let numberList = [];
+let lenghtNumber = prompt("How many numbers do you want in the list?");
+let orderChoice = prompt("Type increasing or decreasing");
+
+function orderedList(numbers) {
+  for (let i = 0; i < lenghtNumber; i++) {
+    let userNumber = prompt("Write a number");
+    numberList.push(userNumber);
+  }
+  if (orderChoice === "increasing") {
+    let order = numberList.sort((a, b) => a - b);
+    alert(order);
+  } else if (orderChoice === "decreasing") {
+    let order = numberList.sort((a, b) => b - a);
+    alert(order);
+  }
+}
+
+orderedList(lenghtNumber);
+*/
