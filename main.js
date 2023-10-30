@@ -77,17 +77,42 @@ for (let i = 0; i < 10; i++) {
 // 5. Crea una funzione che esegue il lancio di una moneta (ritorna testa o croce, casualmente). Quindi, chiedi all'utente quanti lanci vuole effettuare e se punta su testa o croce.
 // Se la maggioranza dei lanci sono uguali a ciò che ha puntato l'utente, mostragli che ha vinto. Altrimenti, mostragli che ha perso.
 
-let number = Math.random();
-console.log(number);
 let userThrows = Number(prompt("How many throws do you want?"));
+let userChoise = prompt("head or tail?");
+
+let resultsList = [];
+let resultAverage = 0;
 
 function coinFlip(throws) {
-  for (let i = 0; i < userThrows; i++) {}
-}
-if (number < 0.5) {
-  alert("Tail");
-} else {
-  alert("Head");
+  for (let i = 0; i < userThrows; i++) {
+    let number = Math.random();
+    let numberRound = Math.round(number);
+    if (numberRound === 1) {
+      alert("Tail");
+    } else {
+      alert("Head");
+    }
+
+    let saveResults = resultsList.push(numberRound);
+    console.log(resultsList);
+  }
+
+  for (let n = 0; n < resultsList.length; n++) {
+    let numberToAdd = resultsList[n];
+    resultAverage = resultAverage + numberToAdd / resultsList.length;
+  }
+  console.log(resultAverage);
+  if (userChoise === "tail" && resultAverage > 0.5) {
+    alert("You Win!");
+  } else if (userChoise === "tail" && resultAverage < 0.5) {
+    alert("You Lose!");
+  } else if (userChoise === "head" && resultAverage < 0.5) {
+    alert("You Win!");
+  } else if (userChoise === "head" && resultAverage > 0.5) {
+    alert("You Lose!");
+  } else if (resultAverage === 0.5) {
+    alert("Tie, try again");
+  }
 }
 
 coinFlip(userThrows);
