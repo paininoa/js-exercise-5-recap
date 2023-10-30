@@ -46,6 +46,7 @@ reverseWord(userWord);
 
 //2. Crea una funzione che concatena una lista di stringhe. Chiedi all'utente quante stringhe vuole concatenare e poi mostragli il risultato.
 
+/*
 let stringsArray = [];
 let userNumber = Number(prompt("How many words do you want to write?"));
 
@@ -59,6 +60,7 @@ function stringsConcat(words) {
 }
 
 stringsConcat(stringsArray);
+*/
 
 //3. Crea una funzione che calcola il doppio di un numero. Quindi chiedi all'utente 10 numeri. Per ogni numero, mostra all'utente il doppio, usando la funzione.
 
@@ -122,6 +124,31 @@ coinFlip(userThrows);
 */
 
 // 6. Crea una funzione che genera il lancio di un dado a 6 facce (ritorna un numero casuale tra 1 e 6). Quindi simula un lancio per il computer e un lancio per l'utente. Mostra all'utente quanto è stato il risultato del computer e quanto è stato il risultato dell'utente e comunicagli se ha vinto o meno.
+
+let resultUser = "";
+let resultComputer = "";
+
+function game() {
+  let userThrow = Math.floor(Math.random() * 6) + 1;
+  alert("Your result is " + userThrow);
+  let computerThrow = Math.floor(Math.random() * 6) + 1;
+  alert("The computer result is " + computerThrow);
+  if (userThrow > computerThrow) {
+    alert("You win!");
+  } else if (userThrow === computerThrow) {
+    alert("Tie");
+  } else {
+    alert("You lose!");
+  }
+}
+
+game();
+
+// 7. Crea una funzione che simula un lancio della roulette (deve ritornare un numero casuale tra 0 e 36).
+// Quindi chiedi all'utente se vuole puntare su un numero o su pari/dispari. Quindi esegui un lancio della roulette e fagli sapere se ha vinto.
+
+// 8. Il casinò:
+// Chiedi all'utente a quale gioco vuole giocare tra lancio della moneta, lancio dei dadi e roulette. Quindi esegui una delle funzioni che avevi già preparato per i precedenti esercizi.
 
 // 9. Crea una lista di animali (stringhe) che fanno parte dello Zoo. Crea una funzione che a partire da una stringa, ci fa sapere se nello zoo c'è quell'animale. Chiedi all'utente quale animale vuole vedere. Comunicagli, usando la funzione, se l'animale c'è o meno.
 // BONUS: la funzione deve funzionare anche se l'utente scrive il nome tutto maiuscolo/tutto maiuscolo/un mix. Ci interessa solo che il nome dell'animale sia lo stesso.
