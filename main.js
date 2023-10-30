@@ -45,18 +45,20 @@ reverseWord(userWord);
 */
 
 //2. Crea una funzione che concatena una lista di stringhe. Chiedi all'utente quante stringhe vuole concatenare e poi mostragli il risultato.
-/*
 
-// NOT FINISHED
-const userNumber = prompt("Write a number");
-let stringsArray = ["alessio", "mela", "ciao"];
-let concatStrings = stringsArray.join();
-console.log(concatStrings);
+let stringsArray = [];
+let userNumber = Number(prompt("How many words do you want to write?"));
 
-function stringsConcat() {
-
+function stringsConcat(words) {
+  for (let i = 0; i < userNumber; i++) {
+    let userWord = prompt("Write word " + (i + 1));
+    stringsArray.push(userWord);
+  }
+  let concatStrings = stringsArray.join(" ");
+  alert(concatStrings);
 }
-*/
+
+stringsConcat(stringsArray);
 
 //3. Crea una funzione che calcola il doppio di un numero. Quindi chiedi all'utente 10 numeri. Per ogni numero, mostra all'utente il doppio, usando la funzione.
 
