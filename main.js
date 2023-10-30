@@ -77,6 +77,7 @@ for (let i = 0; i < 10; i++) {
 // 5. Crea una funzione che esegue il lancio di una moneta (ritorna testa o croce, casualmente). Quindi, chiedi all'utente quanti lanci vuole effettuare e se punta su testa o croce.
 // Se la maggioranza dei lanci sono uguali a ciò che ha puntato l'utente, mostragli che ha vinto. Altrimenti, mostragli che ha perso.
 
+/*
 let userThrows = Number(prompt("How many throws do you want?"));
 let userChoise = prompt("head or tail?");
 
@@ -116,3 +117,26 @@ function coinFlip(throws) {
 }
 
 coinFlip(userThrows);
+*/
+
+// 6. Crea una funzione che genera il lancio di un dado a 6 facce (ritorna un numero casuale tra 1 e 6). Quindi simula un lancio per il computer e un lancio per l'utente. Mostra all'utente quanto è stato il risultato del computer e quanto è stato il risultato dell'utente e comunicagli se ha vinto o meno.
+
+// 9. Crea una lista di animali (stringhe) che fanno parte dello Zoo. Crea una funzione che a partire da una stringa, ci fa sapere se nello zoo c'è quell'animale. Chiedi all'utente quale animale vuole vedere. Comunicagli, usando la funzione, se l'animale c'è o meno.
+// BONUS: la funzione deve funzionare anche se l'utente scrive il nome tutto maiuscolo/tutto maiuscolo/un mix. Ci interessa solo che il nome dell'animale sia lo stesso.
+
+let animalsList = ["cow", "zebra", "tiger", "lion", "parrot", "gazelle"];
+let userAnimal = prompt("What animal are you looking for?");
+
+function animalCheck(animal) {
+  for (let i = 0; i < animalsList.length; i++) {
+    if (animalsList.includes(animal)) {
+      alert("The zoo has a " + animal);
+      break;
+    } else {
+      alert("The zoo does not have a " + animal);
+      break;
+    }
+  }
+}
+
+animalCheck(userAnimal);
