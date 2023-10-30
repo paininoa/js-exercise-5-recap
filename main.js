@@ -124,6 +124,7 @@ coinFlip(userThrows);
 // 9. Crea una lista di animali (stringhe) che fanno parte dello Zoo. Crea una funzione che a partire da una stringa, ci fa sapere se nello zoo c'è quell'animale. Chiedi all'utente quale animale vuole vedere. Comunicagli, usando la funzione, se l'animale c'è o meno.
 // BONUS: la funzione deve funzionare anche se l'utente scrive il nome tutto maiuscolo/tutto maiuscolo/un mix. Ci interessa solo che il nome dell'animale sia lo stesso.
 
+/*
 let animalsList = ["cow", "zebra", "tiger", "lion", "parrot", "gazelle"];
 let userAnimal = prompt("What animal are you looking for?");
 
@@ -140,3 +141,20 @@ function animalCheck(animal) {
 }
 
 animalCheck(userAnimal);
+*/
+
+// 10. Crea una funzione che ordina una lista di numeri dal più piccolo al più grande. Chiedi all'utente quanti numeri vuole inserire. Quindi, chiedi all'utente i numeri. Mostra all'utente la lista di numeri ordinata dal più piccolo al più grande.
+
+let numberList = [];
+let lenghtNumber = prompt("How many numbers do you want in the list?");
+
+function orderedList(numbers) {
+  for (let i = 0; i < lenghtNumber; i++) {
+    let userNumber = prompt("Write a number");
+    numberList.push(userNumber);
+  }
+  let order = numberList.sort((a, b) => a - b);
+  alert(order);
+}
+
+orderedList(lenghtNumber);
