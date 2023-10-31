@@ -78,6 +78,26 @@ for (let i = 0; i < 10; i++) {
 // 4. Crea una funzione che transforma una stringa in maiuscolo o minuscolo in base ad un parametro. Quindi, crea un array che contiene tutte le lettere dell'alfabeto, ciascuna randomicamente maiuscola o minuscola.
 // Consiglio: potete creare la stringa 'abcdefghijklmnopqrstuvz' e con un ciclo for controllare ogni carattere della stringa, ovvero ogni lettera dell'alfabeto.
 
+//COPIATA DA ALEX
+
+const randomCaseLetters = [];
+const characters = "abcdefghijklmnopqrstuvz";
+function stringModifier(trueOrfalse, letter) {
+  if (trueOrfalse) {
+    randomCaseCharacter = letter.toUpperCase();
+  } else {
+    randomCaseCharacter = letter.toLowerCase();
+  }
+  return randomCaseCharacter;
+}
+
+for (i = 0; i < characters.length; i++) {
+  let character = characters[i];
+  let coinFlip = Math.floor(Math.random() * 2);
+  randomCaseLetters.push(stringModifier(coinFlip, character));
+}
+console.log(randomCaseLetters);
+
 // 5. Crea una funzione che esegue il lancio di una moneta (ritorna testa o croce, casualmente). Quindi, chiedi all'utente quanti lanci vuole effettuare e se punta su testa o croce.
 // Se la maggioranza dei lanci sono uguali a ciò che ha puntato l'utente, mostragli che ha vinto. Altrimenti, mostragli che ha perso.
 
@@ -170,6 +190,7 @@ roulette(0, 37); //THIS IS TO GET TO NUMBER 36. IS THERE A BETTER WAY?
 // 8. Il casinò:
 // Chiedi all'utente a quale gioco vuole giocare tra lancio della moneta, lancio dei dadi e roulette. Quindi esegui una delle funzioni che avevi già preparato per i precedenti esercizi.
 
+/*
 const game = prompt("coin, roulette or dice?");
 
 function randomNumber(min, max) {
@@ -191,6 +212,7 @@ if (game === "coin") {
   let dice = randomNumber(1, 6);
   alert(dice);
 }
+*/
 
 // 9. Crea una lista di animali (stringhe) che fanno parte dello Zoo. Crea una funzione che a partire da una stringa, ci fa sapere se nello zoo c'è quell'animale. Chiedi all'utente quale animale vuole vedere. Comunicagli, usando la funzione, se l'animale c'è o meno.
 // BONUS: la funzione deve funzionare anche se l'utente scrive il nome tutto maiuscolo/tutto maiuscolo/un mix. Ci interessa solo che il nome dell'animale sia lo stesso.
@@ -254,4 +276,17 @@ function orderedList(numbers) {
 }
 
 orderedList(lenghtNumber);
+*/
+
+// ---------------ESERCIZI EXTRA DA VECCHIE LEZIONI--------------------
+
+/*
+1. Dare la possibilità di inserire due parole.
+Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
+*/
+
+/*
+let word1 = prompt('Type a word')
+let word2 = prompt('Type another word')
 */
