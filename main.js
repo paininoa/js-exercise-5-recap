@@ -80,6 +80,7 @@ for (let i = 0; i < 10; i++) {
 
 //COPIATA DA ALEX
 
+/*
 const randomCaseLetters = [];
 const characters = "abcdefghijklmnopqrstuvz";
 function stringModifier(trueOrfalse, letter) {
@@ -97,6 +98,7 @@ for (i = 0; i < characters.length; i++) {
   randomCaseLetters.push(stringModifier(coinFlip, character));
 }
 console.log(randomCaseLetters);
+*/
 
 // 5. Crea una funzione che esegue il lancio di una moneta (ritorna testa o croce, casualmente). Quindi, chiedi all'utente quanti lanci vuole effettuare e se punta su testa o croce.
 // Se la maggioranza dei lanci sono uguali a ciò che ha puntato l'utente, mostragli che ha vinto. Altrimenti, mostragli che ha perso.
@@ -286,6 +288,7 @@ Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
 */
 
+/*
 let word1 = prompt("Type a word");
 let word2 = prompt("Type another word");
 
@@ -300,3 +303,25 @@ function compare(string1, string2) {
 }
 
 compare(word1, word2);
+*/
+
+/*
+2. Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC). 
+Quindi, chiedere all’utente quale parola vuole girare.
+BONUS: se la parola scelta dall’utente è un palindromo, avvisalo
+*/
+
+let userWord = prompt("Type a word");
+
+function reverse(word) {
+  let splitWord = word.split("");
+  let reverseWord = splitWord.reverse();
+  let finalWord = reverseWord.join("");
+  if (word === finalWord) {
+    alert("Palindrome");
+  } else {
+    alert(finalWord);
+  }
+}
+
+reverse(userWord);
