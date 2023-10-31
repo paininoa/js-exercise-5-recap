@@ -149,6 +149,7 @@ game();
 // 7. Crea una funzione che simula un lancio della roulette (deve ritornare un numero casuale tra 0 e 36).
 // Quindi chiedi all'utente se vuole puntare su un numero o su pari/dispari. Quindi esegui un lancio della roulette e fagli sapere se ha vinto.
 
+/*
 function roulette(min, max) {
   const bet = prompt("odd or even?");
   let spin = Math.floor(Math.random() * max) + min;
@@ -164,9 +165,32 @@ function roulette(min, max) {
 }
 
 roulette(0, 37); //THIS IS TO GET TO NUMBER 36. IS THERE A BETTER WAY?
+*/
 
 // 8. Il casinò:
 // Chiedi all'utente a quale gioco vuole giocare tra lancio della moneta, lancio dei dadi e roulette. Quindi esegui una delle funzioni che avevi già preparato per i precedenti esercizi.
+
+const game = prompt("coin, roulette or dice?");
+
+function randomNumber(min, max) {
+  let spin = Math.floor(Math.random() * max) + min;
+  return spin;
+}
+
+if (game === "coin") {
+  let coin = randomNumber(1, 2);
+  if (coin === 1) {
+    alert("HEAD");
+  } else {
+    alert("TAIL");
+  }
+} else if (game === "roulette") {
+  let roulette = randomNumber(0, 37);
+  alert(roulette);
+} else if (game === "dice") {
+  let dice = randomNumber(1, 6);
+  alert(dice);
+}
 
 // 9. Crea una lista di animali (stringhe) che fanno parte dello Zoo. Crea una funzione che a partire da una stringa, ci fa sapere se nello zoo c'è quell'animale. Chiedi all'utente quale animale vuole vedere. Comunicagli, usando la funzione, se l'animale c'è o meno.
 // BONUS: la funzione deve funzionare anche se l'utente scrive il nome tutto maiuscolo/tutto maiuscolo/un mix. Ci interessa solo che il nome dell'animale sia lo stesso.
