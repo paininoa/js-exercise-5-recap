@@ -286,7 +286,17 @@ Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
 Se hanno la stessa lunghezza, stamparle entrambe altrimenti stampare la più lunga delle due.
 */
 
-/*
-let word1 = prompt('Type a word')
-let word2 = prompt('Type another word')
-*/
+let word1 = prompt("Type a word");
+let word2 = prompt("Type another word");
+
+function compare(string1, string2) {
+  if (string1.length === string2.length) {
+    alert(string1 + " " + string2);
+  } else if (string1.length > string2.length) {
+    alert(string1);
+  } else {
+    alert(string2);
+  }
+}
+
+compare(word1, word2);
