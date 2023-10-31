@@ -125,6 +125,7 @@ coinFlip(userThrows);
 
 // 6. Crea una funzione che genera il lancio di un dado a 6 facce (ritorna un numero casuale tra 1 e 6). Quindi simula un lancio per il computer e un lancio per l'utente. Mostra all'utente quanto è stato il risultato del computer e quanto è stato il risultato dell'utente e comunicagli se ha vinto o meno.
 
+/*
 let resultUser = "";
 let resultComputer = "";
 
@@ -143,9 +144,26 @@ function game() {
 }
 
 game();
+*/
 
 // 7. Crea una funzione che simula un lancio della roulette (deve ritornare un numero casuale tra 0 e 36).
 // Quindi chiedi all'utente se vuole puntare su un numero o su pari/dispari. Quindi esegui un lancio della roulette e fagli sapere se ha vinto.
+
+function roulette(min, max) {
+  const bet = prompt("odd or even?");
+  let spin = Math.floor(Math.random() * max) + min;
+  if (bet === "even" && spin % 2 === 0) {
+    alert(spin + ": You win!");
+  } else if (bet === "even" && spin % 2 !== 0) {
+    alert(spin + ": You lose");
+  } else if (bet === "odd" && spin % 2 !== 0) {
+    alert(spin + ": You win");
+  } else if (bet === "odd" && spin % 2 === 0) {
+    alert(spin + ": You lose");
+  }
+}
+
+roulette(0, 37); //THIS IS TO GET TO NUMBER 36. IS THERE A BETTER WAY?
 
 // 8. Il casinò:
 // Chiedi all'utente a quale gioco vuole giocare tra lancio della moneta, lancio dei dadi e roulette. Quindi esegui una delle funzioni che avevi già preparato per i precedenti esercizi.
