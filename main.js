@@ -334,6 +334,7 @@ prendendo alternativamente gli elementi da uno e dall’altro
 es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]
 */
 
+/*
 const array1 = ["anna", "biagio", "carla", "denis"];
 const array2 = [1, 2, 3, 4];
 
@@ -352,3 +353,16 @@ function mix(names, numbers) {
 }
 
 console.log(mix(array1, array2));
+*/
+
+// 4. Crea una funzione che ritorna la versione capitalizzata di una stringa (ciao>Ciao). Chiedi all'utente una stringa e mostragli la versione capitalizzata di quella stringa.
+
+const wordUser = prompt("Write a word");
+
+function capital(word) {
+  let firstCapital = word[0].toUpperCase();
+  let result = firstCapital + word.substr(1, word.length);
+  alert(result);
+}
+
+capital(wordUser);
