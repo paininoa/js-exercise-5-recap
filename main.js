@@ -311,6 +311,7 @@ Quindi, chiedere all’utente quale parola vuole girare.
 BONUS: se la parola scelta dall’utente è un palindromo, avvisalo
 */
 
+/*
 let userWord = prompt("Type a word");
 
 function reverse(word) {
@@ -325,3 +326,29 @@ function reverse(word) {
 }
 
 reverse(userWord);
+*/
+
+/*
+3. Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) 
+prendendo alternativamente gli elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]
+*/
+
+const array1 = ["anna", "biagio", "carla", "denis"];
+const array2 = [1, 2, 3, 4];
+
+function mix(names, numbers) {
+  const arrayMix = [];
+  let switcher = true;
+  for (let i = 0; i < names.length + numbers.length; i++) {
+    if (switcher) {
+      arrayMix.push(names[i / 2]);
+    } else {
+      arrayMix.push(numbers[(i - 1) / 2]);
+    }
+    switcher = !switcher;
+  }
+  return arrayMix;
+}
+
+console.log(mix(array1, array2));
