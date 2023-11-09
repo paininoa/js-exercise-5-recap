@@ -168,6 +168,56 @@ function game() {
 game();
 */
 
+// STESSO ESERCIZIO FATTO IN GRUPPO MA STAMPANDO I RISULTATI IN HTML:
+
+/*
+function dado(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+function giocoDadi() {
+  let lanciUtente = dado(1, 6);
+  let lancioComputer = dado(1, 6);
+  return { lanciUtente, lancioComputer };
+}
+
+window.addEventListener("load", () => {
+  const bottone = document.getElementById("btn");
+  const pRisultato = document.getElementById("risultato");
+  bottone.addEventListener("click", () => {
+    const input = document.getElementById("inputUser");
+    const valore = input.value;
+    let result = "";
+    let risultatiSingoli = 0;
+    for (let i = 0; i < valore; i++) {
+      const gioco = giocoDadi();
+      result += `il tuo lancio: ${gioco.lanciUtente}, il lancio del computer e': ${gioco.lancioComputer}. <br><br>`;
+
+      if (gioco.lanciUtente > gioco.lancioComputer) {
+        result += `Hai vinto! il tuo numero è superiore a quello del computer<br><br>`;
+        risultatiSingoli += 0;
+      } else {
+        result += `Hai perso :(  il tuo numero è inferiore a quello del computer <br><br>`;
+        risultatiSingoli += 1;
+      }
+    }
+
+    console.log(risultatiSingoli);
+    const pFinale = document.getElementById("risultatoFinale");
+
+    if (risultatiSingoli / valore < 0.5) {
+      pFinale.innerHTML = "Hai vinto il gioco";
+    } else if (risultatiSingoli / valore === 0.5) {
+      pFinale.innerHTML = "Hai pareggiato";
+    } else {
+      pFinale.innerHTML = "Hai perso";
+    }
+
+    pRisultato.innerHTML = result;
+  });
+});
+
+*/
+
 // 7. Crea una funzione che simula un lancio della roulette (deve ritornare un numero casuale tra 0 e 36).
 // Quindi chiedi all'utente se vuole puntare su un numero o su pari/dispari. Quindi esegui un lancio della roulette e fagli sapere se ha vinto.
 
